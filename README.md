@@ -37,8 +37,9 @@ In the second tab run:
 ```bash
    cd actions && rasa run actions
 ```
-
 After both rasa and action server are up and running, open `index.html` in the browser.
+
+Open `graph.html` to visualize working of rasa core for this chatbot.
 ## Youtube Demo
 
 [![yt_image](https://imgur.com/9rx0w5r.png)](https://youtu.be/MCboRcJxsFk)
