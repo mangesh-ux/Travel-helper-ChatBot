@@ -24,7 +24,7 @@ Install Requirements
 ```bash
   pip3 install -r requirements.txt
 ```
-
+Add your API keys in `actions/.env`.
 In the project directory, first create a folder `models`. Open two terminals with virtual environment activated, In the first tab run:
 
 ```bash
