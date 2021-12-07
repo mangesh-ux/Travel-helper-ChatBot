@@ -8,6 +8,7 @@ import requests
 
 config = dotenv_values(".env")
 API_KEY = config['API_KEY']
+RAPID_API_KEY = config['RAPID_API_KEY']
 # This files contains your custom actions which can be used to run
 # custom Python code.
 #
@@ -67,7 +68,7 @@ class ActionCheckHotels(Action):
         url = "https://hotels4.p.rapidapi.com/locations/v2/search"
         headers = {
             'x-rapidapi-host': "hotels4.p.rapidapi.com",
-            'x-rapidapi-key': "b2b8df2c4emsh55932ebbbefe351p11f903jsn956c777b38ca"
+            'x-rapidapi-key': RAPID_API_KEY
             }
 
         response = requests.request("GET", url, headers=headers, params=querystring)
@@ -93,7 +94,7 @@ class ActionCheckStations(Action):
         url = "https://hotels4.p.rapidapi.com/locations/v2/search"
         headers = {
             'x-rapidapi-host': "hotels4.p.rapidapi.com",
-            'x-rapidapi-key': "b2b8df2c4emsh55932ebbbefe351p11f903jsn956c777b38ca"
+            'x-rapidapi-key': RAPID_API_KEY
             }
 
         response = requests.request("GET", url, headers=headers, params=querystring)
@@ -122,7 +123,7 @@ class ActionCheckTrain(Action):
         headers = {
             'content-type': "application/json",
             'x-rapidapi-host': "trains.p.rapidapi.com",
-            'x-rapidapi-key': "b2b8df2c4emsh55932ebbbefe351p11f903jsn956c777b38ca"
+            'x-rapidapi-key': RAPID_API_KEY
             }
 
         response = requests.request("POST", url, json=payload, headers=headers)
@@ -156,7 +157,7 @@ class ActionBestHotel(Action):
 
         headers = {
             'x-rapidapi-host': "best-booking-com-hotel.p.rapidapi.com",
-            'x-rapidapi-key': "b2b8df2c4emsh55932ebbbefe351p11f903jsn956c777b38ca"
+            'x-rapidapi-key': RAPID_API_KEY
             }
 
         response = requests.request("GET", url, headers=headers, params=querystring)
