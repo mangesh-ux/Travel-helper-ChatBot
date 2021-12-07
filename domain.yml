@@ -1,0 +1,108 @@
+version: "3.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - weather
+  - weather_for_location
+  - city_info
+  - thanks
+  - hotel_suggestion
+  - hotel_for_location
+  - check_station
+  - station_with_location
+  - train_details
+  - train_details_with_name
+  - which_train
+  - best_hotel
+  - best_hotel_in_location
+
+entities:
+  - location
+  - train_name
+
+slots:
+  location:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: location
+  train_name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: train_name
+
+responses:
+  utter_greet:
+  - text: "Hey! My name is Gewn. Heard you're planning for a vacation 🧐. Don't worry, I got you 🥸. So, How should we start?"
+    buttons:
+      - payload: weather
+        title: Let's Start by checking weather out there
+      - payload: hotel_suggestion
+        title: Suggest me some hotels
+      - payload: check_station
+        title: Check transportation stations
+      - payload: train_details
+        title: Show Train details
+      - payload: best_hotel
+        title: What's the best hotel according to booking.com?
+  
+  utter_continue:
+  - text: "How would you like to continue?"
+    buttons:
+      - payload: weather
+        title: Let's continue by checking weather out there
+      - payload: hotel_suggestion
+        title: Suggest me some hotels
+      - payload: check_station
+        title: Check transportation stations
+      - payload: train_details
+        title: Show Train details
+      - payload: best_hotel
+        title: What's the best hotel according to booking.com?
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_ask_location:
+  - text: of where?
+  - text: In what city?
+
+  utter_ask_train:
+  - text: Which train are you looking for?
+
+  utter_getting_weather:
+  - text: Ok, getting weather of {location} ...
+
+  utter_welcome:
+  - text: Welcome
+
+actions:
+- action_get_weather
+- action_get_hotels
+- action_get_stations
+- action_get_train
+- action_best_hotel
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

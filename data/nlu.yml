@@ -1,0 +1,232 @@
+version: "3.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: weather
+  examples: |
+    - what's the weather
+    - what is the temperature today
+    - what is the temperature
+    - i want to know the temperature
+    - i want to know the weather of today
+    - tell me the weather forecast
+    - hows the weather today
+    - Let's Start by chceking weather out there
+    - Let's continue by checking weather out there
+
+- intent: weather_for_location
+  examples: |
+    - what is the weather in [Noida](location)
+    - what is the weather in [New Delhi](location)
+    - weather of [Mumbai] (location)
+    - Today's weather in [Bangalore](location)
+    - [Kolkata](location) weather
+    - Tell me weather of [Hyderabad](location)
+    - Can you tell me weather of [London](location)
+
+- intent: city_info
+  examples: |
+    - [New Delhi](location)
+    - [India](location)
+    - [Mumbai](location)
+    - [Noida](location)
+    - [Kolkata](location)
+    - [Bangalore](location)
+    - [London](location)
+    - [New York](location)
+    - [Goa](location)
+    - [Chennai](location)
+
+- intent: thanks
+  examples: |
+    - thanks
+    - thank you
+    - OK
+
+- intent: hotel_suggestion
+  examples: | 
+    - Suggest me some hotels
+    - which are the best hotels i should consider
+    - please suggest me hotels
+    - which hotels can i stay in
+    - what are the famous hotels
+    - can you suggest me some hotels
+    - show me hotels
+    - show me all the hotels
+    - show me list of hotels
+
+- intent: hotel_for_location
+  examples: |
+    - Suggest me some hotels in [New York][location]
+    - which are the best hotels i should consider in [London](location)
+    - please suggest me hotels in [Paris](location)
+    - what are the famous hotels in [Kolkata](location)
+    - can you suggest me some hotels in [Mumbai](location)
+    - show me hotels in [India](location)
+    - show me all the hotels in [Bangalore](location)
+    - [Noida](location) hotels
+    - show me list of hotels in [Chennai][Location]
+
+- intent: check_station
+  examples: | 
+    - Suggest transportation stations
+    - Check transportation stations
+    - which are the transportation stations
+    - show me flights and train stations
+    - Show me train stations
+    - show me flights
+    - can you suggest me train stations or flights
+    - show me transportation
+    - how to transport there
+    - show me list of train stations and flights
+
+- intent: station_with_location
+  examples: |
+    - Suggest transportation stations in [New York][location]
+    - Check transportation stations in [London](location)
+    - which are the transportation stations in [Paris](location)
+    - show me flights and train stations in [Kolkata](location)
+    - Show me train stations in [Mumbai](location)
+    - show me flights in [India](location)
+    - can you suggest me train stations or flights in [Bangalore](location)
+    - show me transportation in [Noida](location)
+    - where to transport in [Surat][location]
+    - show me list of train stations and flights in [Chennai][location]
+
+- intent: train_details
+  examples: |
+    - Show Train details
+    - show me train details
+    - give me details of a train
+    - tell me about this train
+    - tell me about the train
+    - i want to know about the train
+
+- intent: train_details_with_name
+  examples: |
+    - Show Train details for [Rajdhani](train_name) express
+    - show me details of [Ahimsa](train_name) express
+    - give me details of a [Ajanta](train_name) express
+    - tell me about the [Godavari](train_name) express
+    - tell me about the [Gomti](train_name) Express
+    - i want to know about the [Haryana](train_name) Express
+    - is [Janata](train_name) Express available 
+
+- intent: which_train
+  examples: | 
+    - [Rajdhani](train_name) express
+    - [Ahimsa](train_name) express
+    - [Ajanta](train_name) express
+    - [Godavari](train_name) express
+    - [Gomti](train_name) Express
+    - [Haryana](train_name) Express
+    - [Janata](train_name) Express
+
+- intent: best_hotel
+  examples: | 
+    - What's the best hotel according to booking.com?
+    - show me the best hotel
+    - which hotel is best 
+    - what is highest rated hotel on booking.com
+    - Which hotel do you suggest me?
+    - Which hotel do you think is best?
+    - which hotel is highest rated?
+    - which hotel is most popular?
+
+- intent: best_hotel_in_location
+  examples: | 
+    - What's the best hotel in [Mumbai](location) according to booking.com?
+    - show me the best hotel in [Noida](location)
+    - which hotel is best in [Surat][location]
+    - what is highest rated hotel in [New Delhi][location] on booking.com
+    - Which hotel do you suggest me in [Bangalore][location]?
+    - Which hotel in [Chennai][location] do you think is best?
+    - which hotel is highest rated in [Kolkata][location]?
+    - which hotel is most popular in [Goa][location]?
