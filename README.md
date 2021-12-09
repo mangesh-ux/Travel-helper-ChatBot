@@ -1,7 +1,7 @@
 
 # Travel Helper ChatBot
 
-The idea of this chatbot is to make travel planning an easy process while this chatbot answers all your crucial questions by the knowledge collected through publically avaialable APIs.
+Planning travel is painful. You can spend hours on visiting multiple websites and applications to choose from tens of transportation options and hundreds of accommodation options. Abundance of choice makes decisions complex and a smart bot can help us manage this complexity. The idea of this chatbot is to make travel planning an easy process while this chatbot answers all your crucial questions by the knowledge collected through publicly available APIs.
 
 
 ## How to run the app?
