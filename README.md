@@ -1,7 +1,7 @@
 
 # Travel Helper ChatBot
 
-The idea of this chatbot is to make travel planning an easy process while this chatbot answers all your crucial questions by the knowledge collected through publically avaialable APIs.
+Planning travel is painful. You can spend hours on visiting multiple websites and applications to choose from tens of transportation options and hundreds of accommodation options. Abundance of choice makes decisions complex and a smart bot can help us manage this complexity. The idea of this chatbot is to make travel planning an easy process while this chatbot answers all your crucial questions by the knowledge collected through publicly available APIs.
 
 
 ## How to run the app?
@@ -24,7 +24,7 @@ Install Requirements
 ```bash
   pip3 install -r requirements.txt
 ```
-
+Add your API keys in `actions/.env`.
 In the project directory, first create a folder `models`. Open two terminals with virtual environment activated, In the first tab run:
 
 ```bash
