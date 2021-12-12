@@ -124,3 +124,29 @@ stories:
   steps:
     - intent: best_hotel_in_location
     - action: action_best_hotel
+
+- story: interactive_story_1
+  steps:
+  - intent: search_flight_offers
+  - action: flight_form
+  - active_loop: flight_form
+  - slot_was_set:
+    - requested_slot: origin_location
+  - slot_was_set:
+    - origin_location: Delhi
+  - slot_was_set:
+    - requested_slot: destination_location
+  - slot_was_set:
+    - destination_location: Mumbai
+  - slot_was_set:
+    - requested_slot: departure_date
+  - slot_was_set:
+    - departure_date: 2022-01-01
+  - slot_was_set:
+    - requested_slot: noof_adults
+  - slot_was_set:
+    - noof_adults: 2
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_submit

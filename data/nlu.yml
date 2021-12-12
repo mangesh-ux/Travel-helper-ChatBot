@@ -230,3 +230,28 @@ nlu:
     - Which hotel in [Chennai][location] do you think is best?
     - which hotel is highest rated in [Kolkata][location]?
     - which hotel is most popular in [Goa][location]?
+
+- intent: search_flight_offers
+  examples: |
+    - Search Flight offers
+    - What are the Flight offers
+    - List Flight offers
+    - I want to know Flight details
+    - I want to know flight offers
+    - List flight details
+    - show me flights
+
+# - intent: inform
+#   examples: |
+#     - [Mumbai](origin_location)
+#     - [Jaipur](origin_location)
+#     - [Delhi](origin_location)
+#     - [Mumbai](destination_location)
+#     - [Jaipur](destination_location)
+#     - [Delhi](destination_location)
+#     - [2021-12-21](departure_date)
+#     - [2022-02-01](departure_date)
+#     - [2022-01-21](departure_date)
+#     - [1](noof_adults)
+#     - [5](noof_adults)
+#     - [3](noof_adults)
