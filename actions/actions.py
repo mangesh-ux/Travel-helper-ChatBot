@@ -184,7 +184,7 @@ class ActionBestHotel(Action):
         dispatcher.utter_message(f"The best rated hotel in {loc}....")
         dispatcher.utter_message(f"<b>Name:</b> {hotel_details['name']}")
         dispatcher.utter_message(f"<a href = {hotel_details['link']} target='_blank'>Click Here to Book</a>")
-        dispatcher.utter_message(f"Rating: {hotel_details['rating']}")
+        dispatcher.utter_message(f"<b>Rating:</b> {hotel_details['rating']}")
         
         dispatcher.utter_message(template='utter_continue')
         return [SlotSet('location', loc)]
@@ -210,8 +210,8 @@ class ValidateFlightForm(FormValidationAction):
 
         with open(filename, 'r') as data:
             for line in csv.DictReader(data):
-                print("slot_value", slot_value.lower())
-                print("Location", line['Location'].lower())
+                # print("slot_value", slot_value.lower())
+                # print("Location", line['Location'].lower())
                 if slot_value.lower() in line['Location'].lower():
                     dispatcher.utter_message(f"I found {line['Airport name']} for {slot_value}")
                     return {"origin_location": line['iataCode']}
@@ -254,6 +254,7 @@ class ValidateFlightForm(FormValidationAction):
             return {"departure_date": None}
         elif datetime.strptime(str(date.today()), '%Y-%m-%d')>datetime.strptime(slot_value, '%Y-%m-%d'):
             dispatcher.utter_message("Hey, I'm sorry to inform that time travel is yet to be discovered 🙁! Untill then, please Enter a date either in future or today's date.")
+            return {"departure_date": None}
         else:
             return {"departure_date": slot_value}
 
