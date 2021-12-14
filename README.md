@@ -42,5 +42,5 @@ After both rasa and action server are up and running, open `index.html` in the b
 Open `graph.html` to visualize working of rasa core for this chatbot.
 ## Youtube Demo
 
-[![yt_image](https://imgur.com/9rx0w5r.png)](https://youtu.be/iG_Khr1dTc8)
+[![yt_image](https://imgur.com/kBSe4Lq.png)](https://youtu.be/iG_Khr1dTc8)
 
